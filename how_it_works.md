@@ -40,7 +40,7 @@ The Renuo Upload Client is build on top of the [Dropzone Library](http://www.dro
 The upload handles a multi cors upload to S3 and provides a user interface. For uploading to S3, a signed policy, signature, etc. is needed. 
 The singing process must be safe and secure so it can not be handled in the JS. For this, Renuo Upload Signing is needed.
 
-The first version of Renuo Upload Client is written in CoffeeScript. The second version will be written in TypeScript.
+The first version of Renuo Upload Client is written in CoffeeScript. The second version will be written in [TypeScript](http://www.typescriptlang.org/).
 
 ###[Renuo Upload Signing](https://github.com/renuo/renuo-upload-signing)
 Renuo Upload Signing is a ruby sinatra app. It is only accessed by the Renuo Upload Client and needed to create a signed policy and the other credentials. It also creates a prefix for every upload, so that nothing can be overwritten by another upload.
@@ -49,7 +49,7 @@ Why a ruby sniatra app?<br>
 -Because the first version of the signing part for S3 (policy) was written and tested in ruby.<br>
 In a second version it can be rewritten in any language, because the application is that small.
 
-###Renuo Thumbs Proxy
+###[Renuo Thumbs Proxy](https://github.com/renuo/renuo-thumbs-proxy)
 Renuo Thumbs Proxy is a python flask app. The application stands between Cloudfront and Renuo-Thumbor. It is needed to generate the correct signed URL for Renuo-Thumbor.
 
 Why a python flask app?<br>
