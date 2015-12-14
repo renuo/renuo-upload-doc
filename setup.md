@@ -20,7 +20,9 @@ We recommend to use environment variables to configure the Renuo Upload:
 RENUO_UPLOAD_API_KEY: 'key'
 RENUO_UPLOAD_SIGNING_URL: 'url-to-renuo-upload-signing'
 RENUO_UPLOAD_CDN_HOST: 'url-to-renuo-upload-singning/generate_policy'
-RENUO_UPLOAD_APP_NAME: 'app-name-<env>'
+RENUO_UPLOAD_APP_NAME: 'full-app-name'
 ```
+Look above to see, how exactly the full-app-name should look like.
+
 For further information and examples on how to use Renuo Upload in your project, look at the readme on githup:<br>
 https://github.com/renuo/renuo-upload#renuo-upload-prototype
