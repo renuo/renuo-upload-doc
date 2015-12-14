@@ -18,16 +18,11 @@ The app just need to include the Renuo-Upload-JS with an API key to upload
 7. The app shows the result
 
 ###Part 2 Displaying (& Thumbnails)
-<ol start="8">
-  <li>Vistor request an image on cloudfront</li>
-  <li>If the image exist, cloudfront returns the image -> end</li>
-  <li>If the image dosen't exist on cloudfront, the request is forwarded to the image processing app</li>
-</ol>
-1. 
+1. Vistor request an image on cloudfront
 
-2. 
+2. If the image exist, cloudfront returns the image -> end
 
-2. 
+2. If the image dosen't exist on cloudfront, the request is forwarded to the image processing app
 
 3. The image processing request Renuo-Thumbor with the forwarded request which was adapted and signed to fit Renuo-Thumbor
 
@@ -65,8 +60,8 @@ When it wouldn't work well it can be rewritten in any language, because the appl
 Renuo Thumbor is just a configuration application to set up [Thumbor](https://github.com/thumbor/thumbor), an image manipulation service. ([Thumbor](https://github.com/thumbor/thumbor) is open source and written in python)
 
 ###[Cloudfront](https://aws.amazon.com/cloudfront/)
-Cloudfront caches all files on s3 which are requested. If a file doesn't exist, the request is forward to the image processing app.
-It can't be forwarded directly to Renuo-Thumbor, because Renuo-Thumbor requires a signed Request. For that, the image processing app is needed.
+Cloudfront caches all files on S3 which are requested. If a file doesn't exist, the request is forward to the Renuo Thumbs Proxy.
+It can't be forwarded directly to Renuo-Thumbor, because Renuo-Thumbor requires a signed Request. For this, Renuo Thumbs Proxy is needed.
 
 ###[S3](https://aws.amazon.com/s3/)
 There exists 1 bucket for all applications that use the upload. Every app has an API key that is a folder in this bucket.
