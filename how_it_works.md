@@ -57,7 +57,7 @@ Why a python flask app?<br>
 When it wouldn't work well it can be rewritten in any language, because the application is that small.
 
 ###[Renuo Thumbor](https://github.com/renuo/renuo-thumbor)
-Renuo-Thumbor is just a configuration for setting up Thumbor, an image manipulation service. (Thumbor is open source and written in python)
+Renuo Thumbor is just a configuration application to set up [Thumbor](https://github.com/thumbor/thumbor), an image manipulation service. ([Thumbor](https://github.com/thumbor/thumbor) is open source and written in python)
 
 ###[Cloudfront](https://aws.amazon.com/cloudfront/)
 Cloudfront caches all files on s3 which are requested. If a file doesn't exist, the request is forward to the image processing app.
