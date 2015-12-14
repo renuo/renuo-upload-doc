@@ -33,10 +33,10 @@ The app just need to include the Renuo-Upload-JS with an api-key to upload
 
 ##The single apps/libraries
 ###Renuo-Upload-JS¶
-Renuo-Upload-Js is a build on top of Dropzone Library.
+Renuo-Upload-JS is a build on top of Dropzone Library.
 The upload handles a multi cors upload to S3 and displaying. For uploading to S3 a signed policy, signature, etc. is needed. 
 The singing process must be safe and secure so it can not happen in the Js. For that the image upload app is needed.
-Renuo-Upload-Js first version is written in CoffeeScript, the second will be written in TypeScript.
+Renuo-Upload-JS first version is written in CoffeeScript, the second will be written in TypeScript.
 
 ###The image upload app¶
 The image upload app is a ruby sinatra app. The app is only accessed by the Renuo-Upload-JS.
@@ -52,6 +52,6 @@ When it wouldn't work well it can be rewritten in any language, because the app 
 Renuo-Thumbor is just a configuration for setting up Thumbor a image manipulation service. (Thumbor is open source and written in python)
 ###Cloudfront
 Cloudfront caches all files on s3 which are requested, if a file dosen't exist the request is forward t to the image processing app.
-It can not be forwarded directly to Renuo-Thumbor because Renuo-Thumbor requires a signed Request. For that the image procesisng app is needed.
+It can not be forwarded directly to Renuo-Thumbor because Renuo-Thumbor requires a signed Request. For that the image processing app is needed.
 ###S3
 It exist 1 bucket for all application which uses the upload, every app has an api key which is a folder in this bucket
