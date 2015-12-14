@@ -1,5 +1,5 @@
 # How it works
-
+[](concept_of_renuo_upload.jpg)
 ###Upload
 1. Request to an app for uploading some file(s)
 The app just need to include the Renuo-Upload-JS with an api-key to upload
@@ -17,19 +17,19 @@ The app just need to include the Renuo-Upload-JS with an api-key to upload
 7. The app shows the result
 
 ###Part 2 Displaying (& Thumbnails)
-8. Vistor request an image on cloudfront
+1. Vistor request an image on cloudfront
 
-9. If the image exist, cloudfront returns the image -> end
+2. If the image exist, cloudfront returns the image -> end
 
-9. If the image dosen't exist on cloudfront, the request is forwarded to the image processing app
+2. If the image dosen't exist on cloudfront, the request is forwarded to the image processing app
 
-10. The image processing request Renuo-Thumbor with the forwarded request which was adapted and signed to fit Renuo-Thumbor
+3. The image processing request Renuo-Thumbor with the forwarded request which was adapted and signed to fit Renuo-Thumbor
 
-11. Renuo-Thumbor manipulates the image and returns it
+4. Renuo-Thumbor manipulates the image and returns it
 
-12. The image processing server return the manipulated image to cloudfront
+5. The image processing server return the manipulated image to cloudfront
 
-13. Cloudfront returns the manipulated image
+6. Cloudfront returns the manipulated image
 
 ##The single apps/libraries
 ###Renuo-Upload-JS¶
@@ -54,4 +54,4 @@ Renuo-Thumbor is just a configuration for setting up Thumbor a image manipulatio
 Cloudfront caches all files on s3 which are requested, if a file dosen't exist the request is forward t to the image processing app.
 It can not be forwarded directly to Renuo-Thumbor because Renuo-Thumbor requires a signed Request. For that the image processing app is needed.
 ###S3
-It exist 1 bucket for all application which uses the upload, every app has an api key which is a folder in this bucket![](concept_of_renuo_upload.jpg)
+It exist 1 bucket for all application which uses the upload, every app has an api key which is a folder in this bucket!
