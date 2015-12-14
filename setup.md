@@ -19,6 +19,6 @@ We recommend to use environment variables to configure the Renuo Upload:
 ```rb
 RENUO_UPLOAD_API_KEY: 'key'
 RENUO_UPLOAD_SIGNING_URL: 'url-to-renuo-upload-signing'
-RENUO_UPLOAD_CDN_HOST: 'https://renuo-upload-signing-<env>.herokuapp.com/generate_policy'
+RENUO_UPLOAD_CDN_HOST: ''
 RENUO_UPLOAD_APP_NAME: 'app-name-<env>'
 ```
