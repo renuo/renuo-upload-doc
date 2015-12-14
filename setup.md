@@ -22,3 +22,5 @@ RENUO_UPLOAD_SIGNING_URL: 'url-to-renuo-upload-signing'
 RENUO_UPLOAD_CDN_HOST: 'url-to-renuo-upload-singning/generate_policy'
 RENUO_UPLOAD_APP_NAME: 'app-name-<env>'
 ```
+For further information and examples look at the readme on githup:<br>
+https://github.com/renuo/renuo-upload#renuo-upload-prototype
