@@ -35,25 +35,27 @@ The app just need to include the Renuo-Upload-JS with an API key to upload
 ##The single apps/libraries
 ![](upload full.png)
 
-###[Renuo-Upload-JS¶](https://github.com/renuo/renuo-upload)
-Renuo-Upload-JS is a build on top of Dropzone Library.
-The upload handles a multi cors upload to S3 and provides a user interface. For uploading to S3 a signed policy, signature, etc. is needed. 
-The singing process must be safe and secure so it can not be handled in the JS. For this, the image upload app is needed.
-The first version of Renuo-Upload-JS is written in CoffeeScript, the second will be written in TypeScript.
+###[Client (Renuo Upload Client)](https://github.com/renuo/renuo-upload)
+The Renuo Upload Client is build on top of the [Dropzone Library](http://www.dropzonejs.com/).
+The upload handles a multi cors upload to S3 and provides a user interface. For uploading to S3, a signed policy, signature, etc. is needed. 
+The singing process must be safe and secure so it can not be handled in the JS. For this, Renuo Upload Signing is needed.
 
-###The image upload app¶
-The image upload app is a ruby sinatra app. The app is only accessed by the Renuo-Upload-JS.
-The app is needed to create a signed policy and the other credentials. Another reason is to create a prefix for every upload, so that nothing can be overwritten by another upload.
-Why a ruby sniatra app? -Because the  signing part for S3 (policy) in the first version was written and tested in ruby. 
-In a second version it can be rewritten in any language, because the app is that small.
+The first version of Renuo Upload Client is written in CoffeeScript. The second version will be written in TypeScript.
 
-###The image processing app
-The images processing app is a python flask app. The app stands between Cloudfront and Renuo-Thumbor.
+###[Renuo Upload Signing](https://github.com/renuo/renuo-upload-signing)
+Renuo Upload Signing is a ruby sinatra app. It is only accessed by the Renuo Upload Client and needed to create a signed policy and the other credentials. It also creates a prefix for every upload, so that nothing can be overwritten by another upload.
+
+Why a ruby sniatra app?<br>
+-Because the first version of the signing part for S3 (policy) was written and tested in ruby.<br>
+In a second version it can be rewritten in any language, because the application is that small.
+
+###Renuo Thumbs Proxy
+Renuo Thumbs Proxy is a python flask app. The application connects Cloudfront with Renuo-Thumbor.
 The app is needed to generate the correct signed URL for Renuo-Thumbor.
 Why a python flask app? -Because it's a good chance to try something new.
 When it wouldn't work well it can be rewritten in any language, because the app is that small.
 
-###[Renuo-Thumbor](https://github.com/renuo/renuo-thumbor)
+###[Renuo Thumbor](https://github.com/renuo/renuo-thumbor)
 Renuo-Thumbor is just a configuration for setting up Thumbor, an image manipulation service. (Thumbor is open source and written in python)
 
 ###[Cloudfront](https://aws.amazon.com/cloudfront/)
