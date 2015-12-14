@@ -1,5 +1,4 @@
 # Setup
-
 ## Set up Renuo Upload for Ruby on Rails
 ### Set up Renuo Upload Signing
 In Renuo Upload Signing you need to add a hash into the Environment Variable 'API_KEYS' for every project that uses it.
