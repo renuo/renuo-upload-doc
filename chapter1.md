@@ -54,4 +54,4 @@ Renuo-Thumbor is just a configuration for setting up Thumbor a image manipulatio
 Cloudfront caches all files on s3 which are requested, if a file dosen't exist the request is forward t to the image processing app.
 It can not be forwarded directly to Renuo-Thumbor because Renuo-Thumbor requires a signed Request. For that the image processing app is needed.
 ###S3
-It exist 1 bucket for all application which uses the upload, every app has an api key which is a folder in this bucket
+It exist 1 bucket for all application which uses the upload, every app has an api key which is a folder in this bucket![](concept_of_renuo_upload.jpg)
