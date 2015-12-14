@@ -14,7 +14,7 @@ Renuo Upload Signing will create the full name of your application like this: "a
 
 For further information look at the readme on githup:<br>
 https://github.com/renuo/renuo-upload-signing#configuration
-###Set Up you Ruby On Rails Project
+###Set Up your Ruby On Rails Project
 We recommend to use environment variables to configure the Renuo Upload:
 ```rb
 RENUO_UPLOAD_API_KEY: 'key'
@@ -22,5 +22,5 @@ RENUO_UPLOAD_SIGNING_URL: 'url-to-renuo-upload-signing'
 RENUO_UPLOAD_CDN_HOST: 'url-to-renuo-upload-singning/generate_policy'
 RENUO_UPLOAD_APP_NAME: 'app-name-<env>'
 ```
-For further information and examples look at the readme on githup:<br>
+For further information and examples on how to use Renuo Upload in your project, look at the readme on githup:<br>
 https://github.com/renuo/renuo-upload#renuo-upload-prototype
