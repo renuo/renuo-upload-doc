@@ -1,6 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* How It Works
+* [How It Works](how_it_works.md)
 * Setup
 
