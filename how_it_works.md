@@ -50,7 +50,7 @@ Why a ruby sniatra app?<br>
 In a second version it can be rewritten in any language, because the application is that small.
 
 ###Renuo Thumbs Proxy
-Renuo Thumbs Proxy is a python flask app. The application connects Cloudfront with Renuo-Thumbor.
+Renuo Thumbs Proxy is a python flask app. The application stands between Cloudfront and Renuo-Thumbor.
 The app is needed to generate the correct signed URL for Renuo-Thumbor.
 Why a python flask app? -Because it's a good chance to try something new.
 When it wouldn't work well it can be rewritten in any language, because the app is that small.
