@@ -3,9 +3,9 @@
 
 ###Upload
 1. Request to an app for uploading some file(s)
-The app just need to include the Renuo-Upload-JS with an api-key to upload
+The app just need to include the Renuo-Upload-JS with an API key to upload
 
-2. Delivered Renuo-Upload-JS from the app creates a request with the api key to the image upload app for the credential (policy, signature, etc.)
+2. Delivered Renuo-Upload-JS from the app creates a request with the API key to the image upload app for the credential (policy, signature, etc.)
 
 3. The image upload app generates the credentials if the api key is right and return them
 
@@ -35,7 +35,7 @@ The app just need to include the Renuo-Upload-JS with an api-key to upload
 ##The single apps/libraries
 ![](upload full.png)
 
-###Renuo-Upload-JS¶
+###[Renuo-Upload-JS¶](https://github.com/renuo/renuo-upload)
 Renuo-Upload-JS is a build on top of Dropzone Library.
 The upload handles a multi cors upload to S3 and provides a user interface. For uploading to S3 a signed policy, signature, etc. is needed. 
 The singing process must be safe and secure so it can not be handled in the JS. For this, the image upload app is needed.
@@ -53,12 +53,12 @@ The app is needed to generate the correct signed URL for Renuo-Thumbor.
 Why a python flask app? -Because it's a good chance to try something new.
 When it wouldn't work well it can be rewritten in any language, because the app is that small.
 
-###Renuo-Thumbor¶
+###[Renuo-Thumbor](https://github.com/renuo/renuo-thumbor)
 Renuo-Thumbor is just a configuration for setting up Thumbor, an image manipulation service. (Thumbor is open source and written in python)
 
-###Cloudfront
+###[Cloudfront](https://aws.amazon.com/cloudfront/)
 Cloudfront caches all files on s3 which are requested. If a file doesn't exist, the request is forward to the image processing app.
 It can't be forwarded directly to Renuo-Thumbor, because Renuo-Thumbor requires a signed Request. For that, the image processing app is needed.
 
-###S3
+###[S3](https://aws.amazon.com/s3/)
 There exists 1 bucket for all applications that use the upload. Every app has an API key that is a folder in this bucket.
