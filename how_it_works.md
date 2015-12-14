@@ -18,11 +18,16 @@ The app just need to include the Renuo-Upload-JS with an API key to upload
 7. The app shows the result
 
 ###Part 2 Displaying (& Thumbnails)
-1. Vistor request an image on cloudfront
+<ol start="8">
+  <li>Vistor request an image on cloudfront</li>
+  <li>If the image exist, cloudfront returns the image -> end</li>
+  <li>If the image dosen't exist on cloudfront, the request is forwarded to the image processing app</li>
+</ol>
+1. 
 
-2. If the image exist, cloudfront returns the image -> end
+2. 
 
-2. If the image dosen't exist on cloudfront, the request is forwarded to the image processing app
+2. 
 
 3. The image processing request Renuo-Thumbor with the forwarded request which was adapted and signed to fit Renuo-Thumbor
 
