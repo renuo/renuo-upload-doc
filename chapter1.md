@@ -32,6 +32,7 @@ The app just need to include the Renuo-Upload-JS with an api-key to upload
 6. Cloudfront returns the manipulated image
 
 ##The single apps/libraries
+![](upload full.png)
 ###Renuo-Upload-JS¶
 Renuo-Upload-JS is a build on top of Dropzone Library.
 The upload handles a multi cors upload to S3 and displaying. For uploading to S3 a signed policy, signature, etc. is needed. 
