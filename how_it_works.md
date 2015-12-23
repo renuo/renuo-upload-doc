@@ -1,5 +1,4 @@
 # How it works
-
 ![](concept_of_renuo_upload.jpg)
 
 ###Upload
