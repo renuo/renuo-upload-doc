@@ -1,7 +1,8 @@
 # How it works
 ![](concept_of_renuo_upload.jpg)
 
-###Upload
+### Upload
+
 1. Request to an app for uploading some file(s)
 The app just need to include the Renuo-Upload-JS with an API key to upload
 
