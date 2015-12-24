@@ -44,9 +44,9 @@ The singing process must be safe and secure so it can not be handled in the JS. 
 The first version of Renuo Upload Client is written in CoffeeScript. The second version will be written in [TypeScript](http://www.typescriptlang.org/).
 
 ### Renuo Upload Signing
-[Renuo Upload Signing](https://github.com/renuo/renuo-upload-signing) is a ruby sinatra app. It is only accessed by the Renuo Upload Client and needed to create a signed policy and the other credentials. It also creates a prefix for every upload, so that nothing can be overwritten by another upload.
+[Renuo Upload Signing](https://github.com/renuo/renuo-upload-signing) is a ruby [Sinatra](http://www.sinatrarb.com/) app. It is only accessed by the Renuo Upload Client and needed to create a signed policy and the other credentials. It also creates a prefix for every upload, so that nothing can be overwritten by another upload.
 
-Why a ruby sniatra app?<br>
+Why a ruby [Sinatra](http://www.sinatrarb.com/) app?<br>
 -Because the first version of the signing part for S3 (policy) was written and tested in ruby.<br>
 In a second version it can be rewritten in any language, because the application is that small.
 
