@@ -18,7 +18,7 @@ The app just need to include the Renuo-Upload-JS with an API key to upload
 
 7. The app shows the result
 
-###Part 2 Displaying (& Thumbnails)
+### Part 2 Displaying (& Thumbnails)
 1. Vistor request an image on cloudfront
 
 2. If the image exist, cloudfront returns the image -> end
@@ -33,7 +33,7 @@ The app just need to include the Renuo-Upload-JS with an API key to upload
 
 6. Cloudfront returns the manipulated image
 
-##The single apps/libraries
+## The single apps/libraries
 ![](upload full.png)
 
 ### Client (Renuo Upload Client)
