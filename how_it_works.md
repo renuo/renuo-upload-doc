@@ -8,9 +8,9 @@ The app just need to include the Renuo-Upload-JS with an API key to upload
 
 2. Delivered Renuo-Upload-JS from the app creates a request with the API key to the image upload app for the credential (policy, signature, etc.)
 
-3. The image upload app generates the credentials if the api key is right and return them
+3. The image upload app generates the credentials if the API key is right and return them
 
-4. The form builded by the Renuo-Upload-JS creats a request per file to upload it on S3
+4. The form built by the Renuo-Upload-JS creates a request per file to upload it on S3
 
 5. S3 respond with a status if successful or not
 
@@ -19,9 +19,9 @@ The app just need to include the Renuo-Upload-JS with an API key to upload
 7. The app shows the result
 
 ### Part 2 Displaying (& Thumbnails)
-1. Vistor request an image on cloudfront
+1. Vistor request an image on Cloudfront
 
-2. If the image exist, cloudfront returns the image -> end
+2. If the image exist, Cloudfront returns the image -> end
 
 2. If the image dosen't exist on cloudfront, the request is forwarded to the image processing app
 
