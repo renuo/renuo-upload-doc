@@ -3,42 +3,42 @@
 
 ### Upload
 
-1. Request to an app for uploading some file(s)
-The app just need to include the Renuo-Upload-JS with an API key to upload
+1. Request to an app for uploading some file(s)<br>
+The app just needs to include the Renuo-Upload-JS with an API key to upload files.
 
 2. Delivered Renuo-Upload-JS from the app creates a request with the API key to the image upload app for the credential (policy, signature, etc.)
 
-3. The image upload app generates the credentials if the API key is right and return them
+3. The image upload app generates the credentials if the API key is right and returns them.
 
-4. The form built by the Renuo-Upload-JS creates a request per file to upload it on S3
+4. The form built by the Renuo-Upload-JS creates one request per file to upload it on S3.
 
-5. S3 respond with a status if successful or not
+5. S3 responds with a status if successful or not.
 
-6. The Renuo-Upload-JS handles the respond status of S3 (todo)
+6. The Renuo-Upload-JS handles the respond status of S3. (todo)
 
-7. The app shows the result
+7. The app shows the result.
 
 ### Part 2 Displaying (& Thumbnails)
-1. Vistor request an image on Cloudfront
+1. Visitor requests an image on Cloudfront.
 
 2. If the image exist, Cloudfront returns the image -> end
 
-2. If the image dosen't exist on cloudfront, the request is forwarded to the image processing app
+2. If the image doesn't exist on Cloudfront, the request is forwarded to the image processing app.
 
-3. The image processing request Renuo-Thumbor with the forwarded request which was adapted and signed to fit Renuo-Thumbor
+3. The image processing app requests Renuo-Thumbor with the forwarded request which was adapted and signed to fit Renuo-Thumbor.
 
-4. Renuo-Thumbor manipulates the image and returns it
+4. Renuo-Thumbor manipulates the image and returns it.
 
-5. The image processing server return the manipulated image to cloudfront
+5. The image processing server returns the manipulated image to Cloudfront.
 
-6. Cloudfront returns the manipulated image
+6. Cloudfront returns the manipulated image.
 
 ## The single apps/libraries
 ![](upload full.png)
 
 ### Client (Renuo Upload Client)
-The [Renuo Upload Client](https://aws.amazon.com/s3/) is build on top of the [Dropzone Library](http://www.dropzonejs.com/).
-The upload handles a multi cors upload to S3 and provides a user interface. For uploading to S3, a signed policy, signature, etc. is needed. 
+The [Renuo Upload Client](https://aws.amazon.com/s3/) is built on top of the [Dropzone Library](http://www.dropzonejs.com/).
+The upload handles a multicore upload to S3 and provides a user interface. For uploading to S3, a signed policy, signature, etc. is needed. 
 The singing process must be safe and secure so it can not be handled in the JS. For this, Renuo Upload Signing is needed.
 
 The first version of Renuo Upload Client is written in CoffeeScript. The second version will be written in [TypeScript](http://www.typescriptlang.org/).
