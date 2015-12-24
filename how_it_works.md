@@ -43,26 +43,26 @@ The singing process must be safe and secure so it can not be handled in the JS. 
 
 The first version of Renuo Upload Client is written in CoffeeScript. The second version will be written in [TypeScript](http://www.typescriptlang.org/).
 
-###[Renuo Upload Signing](https://github.com/renuo/renuo-upload-signing)
-Renuo Upload Signing is a ruby sinatra app. It is only accessed by the Renuo Upload Client and needed to create a signed policy and the other credentials. It also creates a prefix for every upload, so that nothing can be overwritten by another upload.
+### Renuo Upload Signing
+[Renuo Upload Signing](https://github.com/renuo/renuo-upload-signing) is a ruby sinatra app. It is only accessed by the Renuo Upload Client and needed to create a signed policy and the other credentials. It also creates a prefix for every upload, so that nothing can be overwritten by another upload.
 
 Why a ruby sniatra app?<br>
 -Because the first version of the signing part for S3 (policy) was written and tested in ruby.<br>
 In a second version it can be rewritten in any language, because the application is that small.
 
-###[Renuo Thumbs Proxy](https://github.com/renuo/renuo-thumbs-proxy)
-Renuo Thumbs Proxy is a python flask app. The application stands between Cloudfront and Renuo-Thumbor. It is needed to generate the correct signed URL for Renuo-Thumbor.
+### Renuo Thumbs Proxy
+[Renuo Thumbs Proxy](https://github.com/renuo/renuo-thumbs-proxy) is a python flask app. The application stands between Cloudfront and Renuo-Thumbor. It is needed to generate the correct signed URL for Renuo-Thumbor.
 
 Why a python flask app?<br>
 -Because it's a good chance to try something new.
 When it wouldn't work well it can be rewritten in any language, because the application is that small.
 
-###[Renuo Thumbor](https://github.com/renuo/renuo-thumbor)
-Renuo Thumbor is just a configuration application to set up [Thumbor](https://github.com/thumbor/thumbor), an image manipulation service. ([Thumbor](https://github.com/thumbor/thumbor) is open source and written in python)
+### Renuo Thumbor
+[Renuo Thumbor](https://github.com/renuo/renuo-thumbor) is just a configuration application to set up [Thumbor](https://github.com/thumbor/thumbor), an image manipulation service. ([Thumbor](https://github.com/thumbor/thumbor) is open source and written in python)
 
-###[Cloudfront](https://aws.amazon.com/cloudfront/)
-Cloudfront caches all files on S3 which are requested. If a file doesn't exist, the request is forward to the Renuo Thumbs Proxy.
+### Cloudfront
+[Cloudfront](https://aws.amazon.com/cloudfront/) caches all files on S3 which are requested. If a file doesn't exist, the request is forward to the Renuo Thumbs Proxy.
 It can't be forwarded directly to Renuo-Thumbor, because Renuo-Thumbor requires a signed Request. For this, Renuo Thumbs Proxy is needed.
 
-###[S3](https://aws.amazon.com/s3/)
-There exists 1 bucket for all applications that use the upload. Every app has an API key that is a folder in this bucket.
+### Amazon S3
+There exists one [Amazon S3](https://aws.amazon.com/s3/) bucket for all applications that use the upload. Every app has an API key that is a folder in this bucket.
