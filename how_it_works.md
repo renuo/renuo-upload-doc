@@ -36,8 +36,8 @@ The app just need to include the Renuo-Upload-JS with an API key to upload
 ##The single apps/libraries
 ![](upload full.png)
 
-###[Client (Renuo Upload Client)](https://github.com/renuo/renuo-upload)
-The Renuo Upload Client is build on top of the [Dropzone Library](http://www.dropzonejs.com/).
+### Client (Renuo Upload Client)
+The [Renuo Upload Client](https://aws.amazon.com/s3/) is build on top of the [Dropzone Library](http://www.dropzonejs.com/).
 The upload handles a multi cors upload to S3 and provides a user interface. For uploading to S3, a signed policy, signature, etc. is needed. 
 The singing process must be safe and secure so it can not be handled in the JS. For this, Renuo Upload Signing is needed.
 
