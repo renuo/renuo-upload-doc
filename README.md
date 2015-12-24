@@ -1,4 +1,4 @@
-# Renuo Uplaod
+# Renuo Upload
 
-This file serves as your book's preface, a great place to describe your book's content and ideas
+The Renuo Upload provides an easy way to upload and use uploaded files. Because all the alternatives for uploading files where not satisfying, we built a upload that is built with micro services.
 
