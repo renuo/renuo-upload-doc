@@ -1,37 +1,38 @@
 # How it works
+
 ![](concept_of_renuo_upload.jpg)
 
 ### Upload
 
-1. Request to an app for uploading some file(s)<br>
+1) Request to an app for uploading some file(s)<br>
 The app just needs to include the Renuo-Upload-JS with an API key to upload files.
+2) Delivered Renuo-Upload-JS from the app creates a request with the API key to the image upload app for the credential (policy, signature, etc.)
 
-2. Delivered Renuo-Upload-JS from the app creates a request with the API key to the image upload app for the credential (policy, signature, etc.)
+3) The image upload app generates the credentials if the API key is right and returns them.
 
-3. The image upload app generates the credentials if the API key is right and returns them.
+4) The form built by the Renuo-Upload-JS creates one request per file to upload it on S3.
 
-4. The form built by the Renuo-Upload-JS creates one request per file to upload it on S3.
+5) S3 responds with a status if successful or not.
 
-5. S3 responds with a status if successful or not.
+6) The Renuo-Upload-JS handles the respond status of S3. (todo)
 
-6. The Renuo-Upload-JS handles the respond status of S3. (todo)
-
-7. The app shows the result.
+7) The app shows the result.
 
 ### Part 2 Displaying (& Thumbnails)
-1. Visitor requests an image on Cloudfront.
 
-2. If the image exist, Cloudfront returns the image -> end
+8) Visitor requests an image on Cloudfront.
 
-2. If the image doesn't exist on Cloudfront, the request is forwarded to the image processing app.
+9a) If the image exist, Cloudfront returns the image -> end
 
-3. The image processing app requests Renuo-Thumbor with the forwarded request which was adapted and signed to fit Renuo-Thumbor.
+9b) If the image doesn't exist on Cloudfront, the request is forwarded to the image processing app.
 
-4. Renuo-Thumbor manipulates the image and returns it.
+10) The image processing app requests Renuo-Thumbor with the forwarded request which was adapted and signed to fit Renuo-Thumbor.
 
-5. The image processing server returns the manipulated image to Cloudfront.
+11) Renuo-Thumbor manipulates the image and returns it.
 
-6. Cloudfront returns the manipulated image.
+12) The image processing server returns the manipulated image to Cloudfront.
+
+13) Cloudfront returns the manipulated image.
 
 ## The single apps/libraries
 ![](upload full.png)
