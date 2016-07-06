@@ -17,7 +17,7 @@ For further information look at the readme on github:<br>
 https://github.com/renuo/renuo-upload-signing#configuration
 
 If you want to set up your own signing-server, please have a look here:<br>
-https://github.com/renuo/renuo-upload-doc/blob/local-setup/local_setup.md#configure-renuo-upload-signing
+https://renuo.gitbooks.io/renuo-upload-doc/content/local_setup.html#configure-renuo-upload-signing
 
 ###Set Up your Ruby On Rails Project
 We recommend to use environment variables to configure the Renuo Upload:
