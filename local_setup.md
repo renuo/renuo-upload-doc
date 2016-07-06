@@ -14,15 +14,15 @@ If you already cloned the project, you can just pull the newest version and migr
 
 1.  Navigate to S3 by clicking on the S3 icon:
 
-   ![S3-Icon](s3-icon.png)
+   ![s3 icon](s3-icon.png)
 
 1.  Create new bucket by clicking on blue button on the top with text "create bucket":
 
-    ![create bucket](create-bucket-button.png)
+   ![create bucket](create-bucket-button.png)
 
 1.  Give it a meaningful name. We suggest something like ```renuo-upload-local-<yourname>-development``` and choose to place where your server should be. We usually use Frankfurt.
 
-      ![configure bucket](new-s3-bucket.png)
+      ![configure bucket](new-s3-bucket.png) 
 
 1.  Click on your project and navigate to Properties (right side of navigation). ![](properties-button.png) Expand the section "Permissions" and click on the button called "Add CORS Configuration".
 
@@ -47,7 +47,7 @@ If you already cloned the project, you can just pull the newest version and migr
 
 1.  Navigate to IAM by clicking on the "Identity & Access Management" icon:
 
-  ![IAM-icon](IAM-icon.png)
+  ![IAM-icon](IAM-icon.pn
 
 1.  Navigate to Users in the navigation on the left side.
 
