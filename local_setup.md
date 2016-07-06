@@ -1,5 +1,7 @@
 # Local Setup
 
+For development, we strongly recommend you to not use the same bucket as for production. Here is the instruction, how you can set up your local `renuo-upload-signing`-Server
+
 ## Install renuo-upload signing
 
 Clone git repository and run bin/setup:
