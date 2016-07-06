@@ -13,8 +13,11 @@ Key-Example (don't use it!): wj871bfa22z0e7f3d8d4ud6f4derbfg0
 
 Renuo Upload Signing will create the full name of your application like this: "app_name"-"env". Keep this in mind when you set up the Renuo Upload inside your app.
 
-For further information look at the readme on githup:<br>
+For further information look at the readme on github:<br>
 https://github.com/renuo/renuo-upload-signing#configuration
+
+If you want to set up your own signing-server, please have a look here:
+https://github.com/renuo/renuo-upload-doc/blob/local-setup/local_setup.md#configure-renuo-upload-signing
 
 ###Set Up your Ruby On Rails Project
 We recommend to use environment variables to configure the Renuo Upload:
