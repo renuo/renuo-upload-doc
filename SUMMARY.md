@@ -4,5 +4,5 @@
 * [How It Works](how_it_works.md)
 * [Setup](setup.md)
 * [Local Setup](local_setup.md)
-* Demo
+* [Demo](demo.md)
 
